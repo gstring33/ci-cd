@@ -1,0 +1,9 @@
+<?php
+
+return array (
+  'DATABASE_HOST' => NULL,
+  'DATABASE_NAME' => NULL,
+  'DATABASE_PASSWORD' => NULL,
+  'DATABASE_PORT' => NULL,
+  'DATABASE_USER' => NULL,
+);
