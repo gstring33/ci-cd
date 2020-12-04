@@ -9,12 +9,7 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/var/www/perso/ci/src/Controller/DevController.php'|file_link(0) }}">src/Controller/DevController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/var/www/perso/ci/templates/dev/index.html.twig'|file_link(0) }}">templates/dev/index.html.twig</a></code></li>
-    </ul>
+    <h1>Hello {{ user }}! ✅</h1>
+    <p>Total : {{ total }}</p>
 </div>
 {% endblock %}
