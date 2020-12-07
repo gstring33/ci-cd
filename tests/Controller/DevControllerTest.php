@@ -17,6 +17,6 @@ class DevControllerTest extends WebTestCase
     public function testSomething()
     {
         $this->client->request('GET', 'http://localhost:8080/');
-        $this->assertEquals(404, $this->client->getResponse()->getStatusCode());
+        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
     }
 }
