@@ -1,4 +1,6 @@
 {
+    "name": "ci-cd",
+    "description": "A project to configure ci/cd workflows",
     "type": "project",
     "license": "proprietary",
     "minimum-stability": "dev",
