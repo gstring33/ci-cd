@@ -34,6 +34,10 @@ jobs:
           if: ${{ always() }}
           run: composer phpcs
 
+      - name: Symfony security checker
+          if: ${{ always() }}
+          run: composer security-checker
+
       - name: PHP Unit tests
         if: ${{ always()}}
-        run: bin/phpunit
+        run: composer unit-tests
