@@ -94,12 +94,12 @@
         "start-dev": "php -S localhost:8080 -t public/",
         "cache-clear": "php bin/console cache:clear",
         "cache-clear-prod": "APP_ENV=prod APP_DEBUG=0 @cache-clear",
-        "unit-tests": "bin/phpunit",
+        "phpunit": "bin/phpunit",
         "phpcs": "vendor/squizlabs/php_codesniffer/bin/phpcs --colors --extensions=php --standard=PSR2 --tab-width=4 --report=full src tests",
         "security-checker": "php bin/console security:check",
         "phpstan": "vendor/bin/phpstan analyse",
         "tests": [
-            "@unit-tests",
+            "@phpunit",
             "@phpcs",
             "@security-checker",
             "@phpstan"

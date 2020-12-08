@@ -44,4 +44,4 @@ jobs:
 
       - name: PHP Unit tests
         if: ${{ always()}}
-        run: composer unit-tests
+        run: composer phpunit
