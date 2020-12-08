@@ -38,6 +38,10 @@ jobs:
           if: ${{ always() }}
           run: composer security-checker
 
+      - name: Symfony security checker
+          if: ${{ always() }}
+          run: composer phpstan
+
       - name: PHP Unit tests
         if: ${{ always()}}
         run: composer unit-tests

@@ -45,6 +45,7 @@
         "twig/twig": "^2.12|^3.0"
     },
     "require-dev": {
+        "phpstan/phpstan": "^0.12.59",
         "sensiolabs/security-checker": "^6.0",
         "squizlabs/php_codesniffer": "*",
         "symfony/browser-kit": "^5.2",
@@ -96,10 +97,12 @@
         "unit-tests": "bin/phpunit",
         "phpcs": "vendor/squizlabs/php_codesniffer/bin/phpcs --colors --extensions=php --standard=PSR2 --tab-width=4 --report=full src tests",
         "security-checker": "php bin/console security:check",
+        "phpstan": "vendor/bin/phpstan analyse",
         "tests": [
             "@unit-tests",
             "@phpcs",
-            "@security-checker"
+            "@security-checker",
+            "@phpstan"
         ]
     },
     "conflict": {
