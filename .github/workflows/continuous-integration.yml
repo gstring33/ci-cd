@@ -30,6 +30,10 @@ jobs:
         if: steps.composer-cache.outputs.cache-hit != 'true'
         run: composer install --prefer-dist --no-progress --no-suggest
 
+      - name: PHP Code Sniffer
+          if: ${{ always() }}
+          run: composer phpcs
+
       - name: PHP Unit tests
         if: ${{ always()}}
         run: bin/phpunit

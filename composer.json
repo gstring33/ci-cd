@@ -45,6 +45,7 @@
         "twig/twig": "^2.12|^3.0"
     },
     "require-dev": {
+        "squizlabs/php_codesniffer": "*",
         "symfony/browser-kit": "^5.2",
         "symfony/css-selector": "^5.2",
         "symfony/debug-bundle": "^5.2",
@@ -89,7 +90,13 @@
         ],
         "start-dev": "php -S localhost:8080 -t public/",
         "cache-clear": "php bin/console cache:clear",
-        "cache-clear-prod": "APP_ENV=prod APP_DEBUG=0 @cache-clear"
+        "cache-clear-prod": "APP_ENV=prod APP_DEBUG=0 @cache-clear",
+        "unit-tests": "bin/phpunit",
+        "phpcs": "vendor/squizlabs/php_codesniffer/bin/phpcs --colors --extensions=php --standard=PSR2 --tab-width=4 --report=full src tests",
+        "tests": [
+            "@unit-tests",
+            "@phpcs"
+        ]
     },
     "conflict": {
         "symfony/symfony": "*"
