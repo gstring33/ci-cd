@@ -99,10 +99,10 @@
         "security-checker": "php bin/console security:check",
         "phpstan": "vendor/bin/phpstan analyse",
         "tests": [
-            "@phpunit",
             "@phpcs",
             "@security-checker",
-            "@phpstan"
+            "@phpstan",
+            "@phpunit"
         ]
     },
     "conflict": {

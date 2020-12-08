@@ -31,16 +31,16 @@ jobs:
         run: composer install --prefer-dist --no-progress --no-suggest
 
       - name: PHP Code Sniffer
-          if: ${{ always() }}
-          run: composer phpcs
+        if: ${{ always() }}
+        run: composer phpcs
 
       - name: Symfony security checker
-          if: ${{ always() }}
-          run: composer security-checker
+        if: ${{ always() }}
+        run: composer security-checker
 
       - name: Symfony security checker
-          if: ${{ always() }}
-          run: composer phpstan
+        if: ${{ always() }}
+        run: composer phpstan
 
       - name: PHP Unit tests
         if: ${{ always()}}
